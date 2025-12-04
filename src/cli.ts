@@ -15,7 +15,7 @@ const execAsync = promisify(exec)
 const name = 'rednote'
 const description =
   'A friendly tool to help you access and interact with Xiaohongshu (RedNote) content through Model Context Protocol.'
-const version = '0.2.3'
+const version = '0.2.4'
 
 // Create server instance
 const server = new McpServer({

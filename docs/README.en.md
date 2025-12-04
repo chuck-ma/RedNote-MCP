@@ -118,6 +118,14 @@ A few things to note:
 - You can use either the global command (`rednote-mcp`) or `npx`
 - Make sure to include `--stdio` - it's needed for Cursor communication
 
+### Searching Notes
+
+- Use the `search_notes` tool with `keywords` (required) and optional `limit` (default 10)
+- The flow opens the homepage first, waits for the search box, types with human-like delays, presses Enter, then scrapes the result list
+- Up to 3 retry attempts are built in (with browser cleanup between attempts) and multiple selectors are used to handle Xiaohongshu UI changes
+- Expect the call to take longer than a normal API request because it drives a real browser with random pauses
+- If you get empty results or "not logged in" errors, run `rednote-mcp init` again to refresh your session
+
 ## Development
 
 ### What You'll Need
